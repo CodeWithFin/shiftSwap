@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 93%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 43 65% 52%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 43 65% 52%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 43 65% 52%;
+    --chart-1: 43 65% 52%;
+    --chart-2: 43 45% 42%;
+    --chart-3: 43 35% 32%;
+    --chart-4: 0 0% 40%;
+    --chart-5: 0 0% 60%;
+    --radius: 0.5rem;
+    --gold: 43 65% 52%;
+    --gold-dim: 43 65% 52%;
+    --surface: 0 0% 9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 4%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(43 65% 52%);
+}
+
+/* Selection */
+::selection {
+  background-color: hsl(43 65% 52%);
+  color: hsl(0 0% 4%);
+}
